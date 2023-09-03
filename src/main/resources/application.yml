@@ -1,0 +1,14 @@
+server:
+  port: 8635
+spring:
+  datasource:
+    username: root
+    password: lqh88060618
+    url: jdbc:mysql://localhost:3307/learning_manager
+  redis:
+    port: 6379
+    password: lqh88060618
+    host: localhost
+logging:
+  level:
+    com.learningmanager: debug
