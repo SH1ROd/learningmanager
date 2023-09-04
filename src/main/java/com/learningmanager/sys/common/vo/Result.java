@@ -29,12 +29,11 @@ public class Result<T> {
         return new Result<>(20001, "fail", null);
     }
 
-    public  static <T> Result<T> fail(T data, String message){
-        return new Result<>(20001, message, data);
-    }
 
-    public  static <T> Result<T> fail(T data){
-        return new Result<>(20001, "fail", data);
+    public  static <T> Result<T> fail(Integer code, String message){return new Result<>(code, message, null);}
+
+    public  static <T> Result<T> fail(Integer code){
+        return new Result<>(code, "fail", null);
     }
 
     public  static <T> Result<T> fail(String message){

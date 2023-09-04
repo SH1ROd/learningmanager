@@ -1,7 +1,9 @@
 package com.learningmanager.sys.service;
 
-import com.learningmanager.sys.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.learningmanager.sys.entity.User;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -13,4 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUserService extends IService<User> {
 
+    Map<String, Object> login(User user);
+
+    Map<String, Object> getuserinfo(String token);
 }
